@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  cassandra:
+    image: cassandra:4.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+
+  cassandra:
+    image: mongo:5.0
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=MyCluster
+      - CASSANDRA_START_RPC=true
+
+  ingestion:
+    build: .
+    container_name: ingestion
+    depends_on:
+      - mongodb
+      - cassandra
