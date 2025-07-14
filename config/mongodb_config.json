@@ -1,0 +1,5 @@
+{
+  "mongodb_uri": "mongodb+srv://madankumar5223k:UdR4mSpo7W0TTgsl@dataengineering.xh9dasq.mongodb.net/diabetes?retryWrites=true&w=majority",
+  "db_name": "diabetes",
+  "collection_name": "patients_cleaned"
+}
